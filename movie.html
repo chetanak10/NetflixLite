@@ -1,0 +1,44 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Title – Netflixlite</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/app.js"></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', async ()=>{
+    const data = await loadJSON('data/movies.json');
+    const id = new URLSearchParams(location.search).get('id');
+    const m = data.find(x=>x.id===id) || data[0];
+    document.title = m.title + ' – Netflixlite';
+    $('#title').textContent = m.title;
+    $('#desc').textContent = m.description;
+    $('#year').textContent = m.year;
+    $('#genres').textContent = (m.genre||[]).join(' • ');
+    $('#rating').textContent = m.rating;
+    $('#backdrop').src = m.backdrop;
+    $('#watch').addEventListener('click', ()=> alert('This is a demo. No real streaming.'));
+    const recs = data.filter(x=>x.id!==m.id && x.genre.some(g=>m.genre.includes(g))).slice(0,5);
+    $('#recs').appendChild(renderRow('More like this', recs));
+  });
+  </script>
+</head>
+<body>
+  <header class="container section" style="display:grid;gap:18px">
+    <img id="backdrop" alt="Backdrop" style="width:100%;border-radius:18px;aspect-ratio:16/9;object-fit:cover;border:1px solid #222"/>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+      <h1 id="title" style="margin:0;flex:1 1 auto"></h1>
+      <span class="tag"><span id="year"></span></span>
+      <span class="tag">Rating: <span id="rating"></span></span>
+      <span class="tag" id="genres"></span>
+    </div>
+    <p id="desc" class="hint"></p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="button" id="watch">Play</button>
+      <a href="browse.html" class="btn btn-ghost">Back to Browse</a>
+    </div>
+  </header>
+  <main id="recs" class="section"></main>
+  <footer class="footer">Demo app • Not for commercial use</footer>
+</body>
+</html>

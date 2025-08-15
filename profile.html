@@ -1,0 +1,43 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Profile – Netflixlite</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/app.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const name = localStorage.getItem('nflx_name') || 'Guest';
+      $('#displayName').value = name;
+      $('#save').addEventListener('click', ()=>{
+        localStorage.setItem('nflx_name', $('#displayName').value);
+        alert('Saved!');
+      });
+      $('#clear').addEventListener('click', ()=>{
+        localStorage.clear();
+        alert('Cleared demo data');
+      });
+    });
+  </script>
+</head>
+<body>
+  <main class="section container">
+    <h1>Your Profile</h1>
+    <div class="profile">
+      <label for="displayName">Display Name</label>
+      <input id="displayName" placeholder="Your name"/>
+      <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+        <button class="button" id="save">Save</button>
+        <button class="btn btn-ghost" id="clear">Clear</button>
+      </div>
+      <p class="hint" style="margin-top:10px">Stored in localStorage (demo). No backend required.</p>
+      <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="tag">Plan: Demo</span>
+        <span class="tag">Profiles: 1</span>
+        <span class="tag">Maturity: All</span>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">Front-end demo only</footer>
+</body>
+</html>

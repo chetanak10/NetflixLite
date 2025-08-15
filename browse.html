@@ -1,0 +1,33 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Browse – Netflixlite</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="assets/app.js"></script>
+  <script defer>
+  document.addEventListener('DOMContentLoaded', async ()=>{
+    const data = await loadJSON('data/movies.json');
+    const params = new URLSearchParams(location.search);
+    const q = (params.get('q')||'').toLowerCase();
+    const trending = data.slice(0,4);
+    const topRated = [...data].sort((a,b)=>b.rating-a.rating);
+    const filtered = q ? data.filter(m => [m.title, ...(m.genre||[])].join(' ').toLowerCase().includes(q)) : data;
+
+    const main = document.querySelector('main');
+    main.appendChild(renderRow('Trending Now', trending));
+    main.appendChild(renderRow('Top Rated', topRated));
+    main.appendChild(renderRow(q?`Search results for “${q}”`:'Popular on Netflixlite', filtered));
+  });
+  </script>
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <h2 style="margin:0 0 8px">Browse</h2>
+      <p class="hint">Use the search bar above or scroll rows below.</p>
+    </div>
+  </main>
+  <footer class="footer">Demo app • Data is static JSON</footer>
+</body>
+</html>
