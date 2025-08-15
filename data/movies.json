@@ -1,1 +1,80 @@
-
+[
+  {
+    "id": "tt4154796",
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "genre": [
+      "Action",
+      "Sci\u2011Fi"
+    ],
+    "rating": 8.4,
+    "poster": "https://image.tmdb.org/t/p/w342/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/orJIJQ3RJTJ63HgNbUsVTN4C9tc.jpg",
+    "description": "After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos's actions."
+  },
+  {
+    "id": "tt0903747",
+    "title": "Breaking Bad",
+    "year": 2008,
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "rating": 9.5,
+    "poster": "https://imgs.search.brave.com/s33p_9e402aq-mj5fFLHn29jODS_iPXrJb_8en7vpMQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/d3gyY2RqemxyZHQ5/MS5qcGc_YXV0bz13/ZWJwJnM9YWYxNmQ4/NzRmMDE0NDdiNjc2/ZmI1ZDcwZTdjYjY4/NjFiMWU4ZDAzMA",
+    "backdrop": "https://imgs.search.brave.com/y7Itl8moY6cAlc3SGn-7eF8pdSYU9EpnstgG_Chc0EI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9md21l/ZGlhLmZhbmRvbXdp/cmUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI1LzA0LzAx/MDYzOTA2L21lcmxp/bl83Njc2NDY1Nl8x/NzNkZjhkZi05MDQ0/LTQ1NmQtOWMyZC0x/YzAzZjFhNDEwNDIt/c3VwZXJKdW1iby0x/MDI0eDY4My5qcGc",
+    "description": "A high-school chemistry teacher turned methamphetamine producer navigates the criminal underworld."
+  },
+  {
+    "id": "tt10872600",
+    "title": "Spider\u2011Man: No Way Home",
+    "year": 2021,
+    "genre": [
+      "Action",
+      "Adventure"
+    ],
+    "rating": 8.2,
+    "poster": "https://image.tmdb.org/t/p/w342/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/3WjbxoqYDTYUJc3XsqT0GB2Q6uL.jpg",
+    "description": "Peter Parker seeks help from Doctor Strange after his identity is revealed."
+  },
+  {
+    "id": "tt2442560",
+    "title": "Peaky Blinders",
+    "year": 2013,
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "rating": 8.8,
+    "poster": "https://image.tmdb.org/t/p/w342/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/yGNnjoIGOdQy3douq60tULY8teK.jpg",
+    "description": "A gangster family epic set in 1900s Birmingham, centered on the Peaky Blinders."
+  },
+  {
+    "id": "tt7366338",
+    "title": "Chernobyl",
+    "year": 2019,
+    "genre": [
+      "Drama",
+      "History"
+    ],
+    "rating": 9.4,
+    "poster": "https://image.tmdb.org/t/p/w342/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/sQeGQJvJxGFPkAe6m4ok9N4dCgs.jpg",
+    "description": "A dramatized account of the 1986 nuclear disaster and its consequences."
+  },
+  {
+    "id": "tt0944947",
+    "title": "Game of Thrones",
+    "year": 2011,
+    "genre": [
+      "Fantasy",
+      "Drama"
+    ],
+    "rating": 9.2,
+    "poster": "https://image.tmdb.org/t/p/w342/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w1280/gwPSoYUHAKmdyVywgLpKKA4BjRr.jpg",
+    "description": "Noble families vie for control of the Iron Throne in the Seven Kingdoms of Westeros."
+  }
+]
